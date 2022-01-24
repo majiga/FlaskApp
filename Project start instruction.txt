@@ -1,0 +1,20 @@
+(base) C:\Users\Majiga\Desktop>mkdir Flask_Blog
+
+Open Visual Studio Code
+
+In VS code, open Terminal in command prompt
+
+
+(base) C:\Users\Majiga\Desktop\Flask_Blog>pip install virtualenv
+
+(base) C:\Users\Majiga\Desktop\Flask_Blog>virtualenv env
+
+(base) C:\Users\Majiga\Desktop\Flask_Blog>env\Scripts\activate.bat
+
+(env) (base) C:\Users\Majiga\Desktop\Flask_Blog>pip install flask flask-sqlalchemy
+
+Now we can see env folder in FLASK_BLOG project folder.
+
+(flask_env) (base) C:\Users\Majiga\Desktop\Flask_Blog>code .
+Opens Visual Studio Code in this virtual environment
+
