@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block head %}
+    <title>Leadership Visualisation</title>
+
+{% endblock %}
+    
+{% block body %}
+
+<div class="topnav">
+    <a href="{{ url_for('index') }}">HOME</a>
+    <a href="{{ url_for('diversity') }}">DIVERSITY</a>
+    <a class="active" href="{{ url_for('leadership') }}">LEADERSHIP</a>
+    <a href="{{ url_for('about') }}">ABOUT</a>
+</div>  
+
+<h2>Hello All</h2>
+
+
+   
+{% endblock %}

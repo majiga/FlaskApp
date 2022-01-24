@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+{% block head %}
+    <title>Online Visualisation</title>
+
+{% endblock %}
+    
+{% block body %}
+
+<div class="topnav">
+  <a class="active" href="{{ url_for('index') }}">HOME</a>
+  <a href="{{ url_for('diversity') }}">DIVERSITY</a>
+  <a href="{{ url_for('leadership') }}">LEADERSHIP</a>
+  <a href="{{ url_for('about') }}">ABOUT</a>
+</div>    
+
+
+<h2>Hello Majiga</h2>
+
+<h3>{{ utc_dt }}</h3>
+   
+{% endblock %}
