@@ -1,4 +1,5 @@
 <style>
+
 body {
   margin: 0;
   font-family: Arial, Helvetica, sans-serif;
@@ -27,4 +28,21 @@ body {
   background-color: #04AA6D;
   color: white;
 }
+
+/* Keyword value/name of color */
+.div-1 {
+  background-color: lightcyan;
+}
+
+/* Hexadecimal value */
+.div-2 {
+ background-color:cadetblue;	 
+}
+
+/* RGB value */
+.div-3 {
+background-color:#bfe0d4;
+}
+
+
 </style>  
