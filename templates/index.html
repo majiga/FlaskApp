@@ -1,10 +1,12 @@
 {% extends 'base.html' %}
 
-{% block head %}
-    <title>Online Visualisation</title>
-
+{% block head %}  
+  <title>Online Visualisation</title>
+  <script src="https://d3js.org/d3.v7.min.js"></script>
 {% endblock %}
-    
+
+
+
 {% block body %}
 
 <div class="topnav">
@@ -15,8 +17,65 @@
 </div>    
 
 
-<h2>Hello Majiga</h2>
+<div class="div-1">
+  <h2 style="text-align:center;">Hello All!</h2>
+</div>
 
-<h3>{{ utc_dt }}</h3>
-   
+<div id="viz" class="div-3">  
+</div>
+
+<script>
+
+  var data = [210, 36, 322, 59, 123, 350, 290];
+  var width = 400, height = 300;
+  
+  <!--STEP 1: Add svg element in the HTML file, within the body. -->
+  var svg = d3.select("#viz")
+    .append("svg")
+    .attr("width", width)
+    .attr("height", height);
+    
+  var bars = svg.selectAll(".myBars")
+    .data(data)
+    .enter()
+    .append("rect");
+    
+  bars.attr("x", 10)
+    .attr("y", function(d,i){ return 10 + i*40})
+    .attr("width", function(d){ return d})
+    .attr("height", 30);  
+  
+  var texts = svg.selectAll(".myTexts")
+    .data(data)
+    .enter()
+    .append("text");
+
+  texts.attr("x", function(d){ return d + 16})
+    .attr("y", function(d,i){ return 30 + i*40})
+    .text(function(d){ return d});
+
+</script>
+
+
+<div>
+  <h2 style="text-align:center;">SOME TEXT</h2>
+
+</div>
+
+  
+  
+<div>
+  <img src="../static/img/mongol2.jpg" alt="Sky" style="max-width: 100%">
+</div>
+
+<div class="div-3">
+        <h3>{{ utc_dt }}</h3>
+</div>
+  
+
+
+
+
+
+
 {% endblock %}
